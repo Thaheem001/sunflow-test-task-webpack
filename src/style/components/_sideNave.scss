@@ -1,0 +1,98 @@
+.side-nav {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: $white-color;
+    width: 320px;
+    max-width: 320px;
+    padding-bottom: 50px;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 999999;
+    padding-top: 50px;
+    &::-webkit-scrollbar {
+        visibility: hidden;
+        display: none;
+    }
+    .nav-links-outer {
+        border-bottom: 0.5px solid gray;
+        width: 100%;
+        .nav-links {
+            width: 100%;
+            padding: 15px 0px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            text-transform: capitalize;
+            &.active {
+                background-image: linear-gradient($primary-color, $primary-color2) !important;
+                color: $white-color;
+                svg path {
+                    fill: $white-color !important;
+                }
+            }
+            &:hover {
+                background-image: linear-gradient(rgba($primary-color, 0.4), rgba($primary-color2, 0.4));
+            }
+            .icon {
+                display: inline-flex;
+                justify-content: center;
+                width: 60px;
+                min-width: 60px;
+                font-size: 16px;
+                transition: width 0.5s ease-in-out;
+            }
+            .text {
+                width: 100%;
+                max-width: 200px;
+                white-space: nowrap;
+                transition: width 0.5s ease-in-out;
+                overflow: hidden;
+                transition-property: width, max-width;
+            }
+            &:not(.active) {
+                .icon i {
+                    background-image: linear-gradient(rgba($primary-color, 1), rgba($primary-color2, 1));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            &.top-nav-btn {
+                justify-content: left;
+                box-shadow: none;
+                border: none;
+            }
+            &.custom {
+                padding: 0px 0px 5px;
+                background: none !important;
+            }
+        }
+    }
+    &.hide {
+        width: 60px;
+        .nav-links-outer {
+            border-bottom-color: transparent;
+            .nav-links {
+                .icon {
+                    margin-right: 0;
+                }
+                .text {
+                    width: 0px;
+                    max-width: 0;
+                }
+                &.child:hover {
+                    background-image: none !important;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    .side-nav {
+        background-color: $dark-white-color;
+    }
+}

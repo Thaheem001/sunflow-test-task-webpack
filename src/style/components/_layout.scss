@@ -1,0 +1,73 @@
+.main_layOut {
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    padding-top: 50px;
+    background-color: $white-color;
+    position: relative;
+    .nav_btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 25px;
+        color: $primary-color;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .left-box {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        &::-webkit-scrollbar {
+            visibility: hidden;
+            display: none;
+        }
+    }
+    .right-box {
+        width: -webkit-fill-available;
+        background-color: #f7f8fa;
+        padding: 2.5%;
+        max-width: 100%;
+        transition: all 0.5s ease-in-out;
+        margin-left: 60px;
+        &.show-nav {
+            max-width: calc(100% - 300px);
+        }
+        .layout-top-box {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-bottom: 30px;
+            button {
+                border-radius: 40px;
+                box-shadow: none;
+                text-transform: capitalize;
+                &.logout_btn {
+                    border-color: $primary-color;
+                    color: $primary-color;
+                    font-weight: bold;
+                    &:hover {
+                        background-image: linear-gradient($primary-color, $primary-color2);
+                        color: $white-color;
+                    }
+                }
+                &.save_changes_btn {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    background-image: linear-gradient($primary-color, $primary-color2);
+                }
+            }
+        }
+    }
+    &.dark {
+        background-color: $dark-white-color;
+        color: $white-color;
+        .right-box {
+            background-color: $dark-background-color;
+        }
+    }
+}

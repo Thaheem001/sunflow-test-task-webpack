@@ -1,0 +1,259 @@
+.createIssuePageWrapper {
+    .leftNavBar {
+        width: 70px;
+        height: 100%;
+    }
+
+    .filledWhiteBtn {
+        border-radius: 16px;
+        background-image: linear-gradient(180deg, $white-color, $white-color);
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: none !important;
+        box-shadow: none;
+    }
+
+    .filledGradientBtn {
+        border-radius: 16px;
+        background-image: linear-gradient(180deg, $primary-color, $primary-color2);
+        color: $white-color;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: none !important;
+        box-shadow: none;
+        white-space: nowrap;
+    }
+
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+        min-width: 100% !important;
+    }
+
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+        color: $primary-color;
+    }
+
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+        background-color: $primary-color2;
+    }
+
+    .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border: 1px solid #c4c4c4;
+    }
+
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+        height: 48px !important;
+    }
+
+    .MuiFormControlLabel-root .MuiFormControlLabel-label {
+        font-size: 14px;
+    }
+
+    .MuiSelect-select {
+        height: 16px !important;
+        min-height: 0px !important;
+    }
+
+    .rightCreateIssuePageContainer {
+        font-family: "Helvetica";
+        height: auto;
+        width: 100%;
+
+        .issueTopButton {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            padding: 30px 0px 60px 0px;
+        }
+
+        .createIssueCardContainer {
+            background-color: $white-color;
+            border-radius: 16px;
+            height: auto;
+            padding: 30px 60px;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+
+            h5 {
+                font-size: 18px;
+                color: $primary-color;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+                color: #898787;
+                font-weight: 500px;
+            }
+
+            .MuiTextField-root {
+                & .Mui-focused {
+                    & .MuiOutlinedInput-notchedOutline {
+                        border: 1px solid #c4c4c4;
+                    }
+                }
+            }
+
+            .MuiInputLabel-root {
+                color: #000;
+            }
+
+            .createIssueCardInputFields {
+                margin-top: 60px;
+            }
+
+            .issueContactAssignFields {
+                margin: 40px 0px;
+
+                > h5 {
+                    padding-bottom: 40px;
+                }
+            }
+
+            .issueContactGrid {
+                overflow: hidden;
+
+                .MuiPaper-root {
+                    border-radius: 8px;
+                    box-shadow: none;
+                    border-top: 0.5px solid #e2e2e2;
+                }
+
+                .MuiTableContainer-root {
+                    width: 100%;
+                    border-radius: 0px;
+                    max-height: 589px;
+                    overflow: auto;
+                    margin-bottom: 20px;
+
+                    .MuiTableCell-root {
+                        padding: 0%;
+                    }
+                    .MuiTableHead-root {
+                        position: sticky;
+                        top: 0%;
+                        z-index: 22;
+
+                        .MuiTableCell-root {
+                            background: $white-color;
+                            border-bottom: 0.5px solid #e2e2e2;
+                            height: 48px;
+                            padding: 0px 15px;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #000;
+                            white-space: nowrap;
+                            &:nth-child(1) {
+                                min-width: 10px;
+                            }
+                            &:nth-child(2) {
+                                padding-left: 0% !important;
+                            }
+                        }
+
+                        .tableHeadItem {
+                            span {
+                                display: flex;
+                                align-items: center;
+                                img {
+                                    height: 20px;
+                                    width: 20px;
+                                    cursor: pointer;
+                                    padding-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                    .MuiTableBody-root {
+                        background-color: $white-color;
+                        border-radius: 8px;
+
+                        .tableBodyRow {
+                            position: relative;
+                            z-index: 5;
+                            border-bottom: 0.5px solid #e2e2e2;
+
+                            &:nth-of-type(odd) {
+                                background-color: #e0e0e0;
+                            }
+                            .MuiTableCell-root {
+                                height: 65px;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #000;
+                                padding: 0px 15px;
+                                border: none;
+                                &:nth-child(1) {
+                                    min-width: 20px;
+                                    max-width: 20px;
+                                }
+                                &:nth-child(2) {
+                                    padding-left: 0%;
+                                }
+                                i {
+                                    font-size: 14px;
+                                }
+                                img {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .MuiTablePagination-root {
+                    p {
+                        font-size: 14px;
+                        font-weight: 400px;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .MuiTablePagination-actions {
+        button {
+            color: $primary-color;
+        }
+    }
+    .css-fvipm8.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-width: 1px !important;
+        border-color: rgba(0, 0, 0, 0.23) !important;
+    }
+    .css-1nr2wod.Mui-checked {
+        color: $primary-color !important;
+    }
+    .css-1ju1kxc {
+        background-color: $primary-color !important;
+    }
+    .css-i44wyl {
+        width: 100% !important;
+    }
+}
+
+.dark {
+    .createIssuePageWrapper {
+        .rightCreateIssuePageContainer {
+            .createIssueCardContainer {
+                background-color: $dark-white-color;
+                h5 {
+                    color: #000;
+                }
+                .issueContactGrid {
+                    .MuiTableHead-root {
+                        .MuiTableCell-root {
+                            color: $white-color !important;
+                            background-color: $dark-background-color !important;
+                        }
+                    }
+                    .MuiTableCell-root {
+                        background-color: $dark-white-color;
+                    }
+                }
+            }
+        }
+    }
+}

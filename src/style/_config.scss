@@ -1,0 +1,35 @@
+// main.scss
+$primary-color: #e84d3e;
+$primary-color2: #ef8439;
+$background-color: #fafbfa;
+$white-color: #fff;
+
+$dark-background-color: #576574;
+$dark-white-color: #d2dae2;
+// $dark-white-color: #1e272e;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    font-family: "Roboto Flex";
+}
+
+a,
+a:active,
+a:hover {
+    text-decoration: none;
+    color: initial;
+}
+ul {
+    margin-left: 0px;
+    list-style-type: none;
+}
+
+button {
+    font-family: "Helvetica";
+}
